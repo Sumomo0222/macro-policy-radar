@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宏观经济与政策雷达 · 2026-11-19</title>
+<meta name="description" content="每日更新的中国、美国及全球宏观经济、央行、财政、产业与监管政策雷达看板。信息聚合，非投资建议。">
+<style>
+  :root {
+    --bg: #0b0f17;
+    --panel: #121826;
+    --panel2: #0e1420;
+    --border: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --cn: #f87171;
+    --us: #60a5fa;
+    --global: #34d399;
+    --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.65;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header.hero {
+    background: radial-gradient(1200px 400px at 20% -10%, rgba(56,189,248,.18), transparent),
+                radial-gradient(800px 300px at 90% 0%, rgba(248,113,113,.12), transparent);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 28px 22px;
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 26px; letter-spacing: 1px; }
+  h1 .dot { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .badges { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    font-size: 12px; padding: 3px 10px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--panel2); color: var(--muted);
+  }
+  .badge.cn { color: var(--cn); border-color: rgba(248,113,113,.35); }
+  .badge.us { color: var(--us); border-color: rgba(96,165,250,.35); }
+  .badge.gl { color: var(--global); border-color: rgba(52,211,153,.35); }
+  h2 {
+    font-size: 19px; margin: 28px 0 12px; padding-left: 12px;
+    border-left: 4px solid var(--accent);
+  }
+  h2 .sub { font-size: 12px; color: var(--muted); font-weight: normal; margin-left: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .card h3 { font-size: 15px; margin-bottom: 8px; color: var(--accent); }
+  .card.cn h3 { color: var(--cn); }
+  .card.us h3 { color: var(--us); }
+  .card.gl h3 { color: var(--global); }
+  ul.list { list-style: none; }
+  ul.list li { padding: 6px 0; border-top: 1px dashed rgba(148,163,184,.15); font-size: 14px; }
+  ul.list li:first-child { border-top: none; }
+  .date { color: var(--muted); font-size: 12px; margin-right: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .src { color: var(--muted); font-size: 12px; }
+  .kv { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .stat {
+    flex: 1 1 140px; background: var(--panel2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 12px;
+  }
+  .stat .v { font-size: 20px; font-weight: 700; }
+  .stat .k { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .up { color: var(--global); }
+  .down { color: var(--cn); }
+  .flat { color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  tr:hover td { background: rgba(56,189,248,.04); }
+  .note {
+    background: rgba(251,191,36,.07); border: 1px solid rgba(251,191,36,.3);
+    color: #fcd34d; border-radius: 10px; padding: 12px 16px; font-size: 13px; margin: 14px 0;
+  }
+  footer {
+    margin-top: 40px; color: var(--muted); font-size: 12.5px;
+    border-top: 1px solid var(--border); padding-top: 18px;
+  }
+  .srclist { font-size: 13px; }
+  .srclist li { margin: 4px 0 4px 18px; }
+  @media (max-width: 640px) { h1 { font-size: 21px; } body { padding: 16px 10px 40px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1><span class="dot">◉</span> 宏观经济与政策雷达</h1>
+  <div class="meta">
+    数据截至：<strong>2026-11-19 17:45（北京时间）</strong> ｜ 本期人工生成，此后每日 09:00 自动更新 ｜
+    覆盖：中国 · 美国 · 全球主要经济体
+  </div>
+  <div class="badges">
+    <span class="badge cn">中国：10月经济与金融数据落地，贷款再现负增长</span>
+    <span class="badge us">美国：12月9日议息，加息25bp概率约95.6%</span>
+    <span class="badge gl">日本：12月加息预期升温（86%经济学家）</span>
+    <span class="badge gl">中美：关税暂停安排延至2027-01-10</span>
+  </div>
+</header>
+
+<div class="note">
+  ⚠️ 本页面为公开信息聚合与整理，<strong>不构成任何投资建议</strong>。所有数据以官方发布为准；
+  部分内容来自第三方媒体对官方文件的转述。当信息源不可用时会在对应位置如实标注，不做推测性补齐。
+</div>
+
+<h2>① 今日重点 <span class="sub">过去 7 天关键事实</span></h2>
+<div class="card">
+  <ul class="list">
+    <li><span class="date">11-16</span> 国家统计局发布10月经济数据：规模以上工业增加值同比 <strong>+4.8%</strong>；10月社会消费品零售总额 46463亿元、同比 <strong>+0.4%</strong>（除汽车外 +2.5%，汽车类明显拖累）；1—10月固定资产投资 364824亿元。官方定性"总体平稳、向新向优"。<a href="https://www.stats.gov.cn/sj/zxfb" target="_blank" rel="noopener">统计局数据发布</a> · <a href="https://www.cls.cn/detail/2534976" target="_blank" rel="noopener">财联社</a></li>
+    <li><span class="date">11-13</span> 10月金融数据"降速提质"：人民币贷款 <strong>-1000亿元</strong>（同比多减3200亿，再现负值）；新增社融 1.15万亿（同比多增3333亿）；社融存量 +7.2%；M2 +7.1%，M1 +4.4%（较9月回升1.2个百分点）。<a href="https://finance.eastmoney.com/a/202611163931633954.html" target="_blank" rel="noopener">东方财富</a> · <a href="https://m.sohu.com/a/1101233985_121443915/" target="_blank" rel="noopener">中新网</a></li>
+    <li><span class="date">11-16</span> 10月70城房价：一线城市环比<strong>总体上涨</strong>，二三线环比下降，各线同比降幅继续收窄。<a href="https://feng.ifeng.com/c/8y6iyufTOTJ" target="_blank" rel="noopener">凤凰网</a> · <a href="https://app.xinhuanet.com/news/article.html?articleId=20261116c81f26ff76e047fba5d7334efbf49c90" target="_blank" rel="noopener">新华网</a></li>
+    <li><span class="date">11-10</span> 美国10月CPI：环比 <strong>+0.4%</strong>（高于预期0.3%，前值0.6%），核心环比 +0.3%；因官方序列断档，<strong>同比数据缺失</strong>（美银插值估算整体约3.8%、核心约2.7%，仅供参考）。CME FedWatch：12月9日会议加息25bp概率升至 <strong>95.6%</strong>。<a href="https://www.coindesk.com/zh/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3" target="_blank" rel="noopener">CoinDesk</a> · <a href="https://m.sohu.com/a/1099721230_121157270" target="_blank" rel="noopener">搜狐/CME</a></li>
+    <li><span class="date">11-18/19</span> 日本央行行长植田和男表示"居民消费将重回增长"，市场对12月加息的预期升温；11月11–18日调查显示 86%（71位中61位）经济学家预期日央行12月加息25bp至 <strong>1.50%</strong>，若兑现将是37年来首次年内加息三次。<a href="https://cn.investing.com/news/stock-market-news/article-3676066" target="_blank" rel="noopener">英为财情</a> · <a href="https://m.sohu.com/a/1103454565_122014422" target="_blank" rel="noopener">搜狐</a></li>
+    <li><span class="date">11-11</span> 海关总署：前10月我国货物贸易进出口总值同比 <strong>+20%</strong>；其中机电产品出口16.81万亿元（+25.2%）、进口8.17万亿元（+35%）。<a href="http://www.customs.gov.cn/customs/2026-11/11/article_2026111109124156465.html" target="_blank" rel="noopener">海关总署</a></li>
+    <li><span class="date">11-02</span> 证监会就稳市场稳预期答记者问：全市场902家上市公司披露1110单回购增持贷款公告，加上中国国新、中国诚通申请额度，贷款上限累计约 <strong>4400亿元</strong>。<a href="https://www.csrc.gov.cn/csrc/c100028/c7668092/content.shtml" target="_blank" rel="noopener">证监会</a></li>
+  </ul>
+</div>
+
+<h2>② 宏观数据速览 <span class="sub">截至 2026-11-19 已发布口径</span></h2>
+<div class="grid">
+  <div class="card cn">
+    <h3>中国（2026年10月）</h3>
+    <div class="kv">
+      <div class="stat"><div class="v flat">+4.8%</div><div class="k">工业增加值同比</div></div>
+      <div class="stat"><div class="v down">+0.4%</div><div class="k">社零同比（除汽车+2.5%）</div></div>
+      <div class="stat"><div class="v down">-1000亿</div><div class="k">10月新增人民币贷款</div></div>
+      <div class="stat"><div class="v up">+7.2%</div><div class="k">社融存量同比</div></div>
+      <div class="stat"><div class="v flat">+7.1%</div><div class="k">M2同比（M1 +4.4%）</div></div>
+      <div class="stat"><div class="v up">+20%</div><div class="k">前10月进出口总值同比</div></div>
+    </div>
+    <ul class="list" style="margin-top:8px">
+      <li><span class="date">注</span> 1—10月固定资产投资364824亿元（官方发布页见链接，增速本期未采集到具体数值，不臆测）。财政部1—10月财政收支：截至发稿<strong>尚未检索到发布</strong>（最新官方口径为前三季度，10-23发布）。<a href="https://www.mof.gov.cn/zhengwuxinxi/redianzhuanti/quanguocaizhengshouzhiqingkuang" target="_blank" rel="noopener">财政部专栏</a></li>
+      <li><span class="date">11-06</span> 国常会：学习贯彻关于前三季度经济形势和后几个月重点工作的重要讲话精神；听取社会救助工作汇报。<a href="https://www.news.cn/politics/leaders/20261106/03f4c6201fe1470a836227f576772137/c.html" target="_blank" rel="noopener">新华社</a></li>
+    </ul>
+  </div>
+  <div class="card us">
+    <h3>美国（2026年10月）</h3>
+    <div class="kv">
+      <div class="stat"><div class="v flat">+0.4%</div><div class="k">CPI环比（核心+0.3%）</div></div>
+      <div class="stat"><div class="v flat">缺失</div><div class="k">CPI同比（官方序列断档）</div></div>
+      <div class="stat"><div class="v up">+16.5万</div><div class="k">10月非农新增就业</div></div>
+      <div class="stat"><div class="v flat">3.75–4.00%</div><div class="k">联邦基金利率区间</div></div>
+    </div>
+    <ul class="list" style="margin-top:8px">
+      <li>美联储9月加息25bp（2023年以来首次），10月28日会议<strong>维持不变</strong>；通胀压力仍存。<a href="https://bank.fx678.com" target="_blank" rel="noopener">汇通网</a> · <a href="https://zh.tradingeconomics.com/united-states/interest-rate" target="_blank" rel="noopener">TradingEconomics</a></li>
+    </ul>
+  </div>
+  <div class="card gl">
+    <h3>全球</h3>
+    <ul class="list">
+      <li><span class="date">11-01</span> OPEC+原则上维持12月产量目标，重心转向2027年配额谈判；受中东冲突影响，海湾产油国产量低于配额，供应中断支撑油价与全球通胀。<a href="https://m.cls.cn/detail/2521751" target="_blank" rel="noopener">财联社</a> · <a href="https://wallstreetcn.com/articles/3780445" target="_blank" rel="noopener">华尔街见闻</a></li>
+      <li><span class="date">02-21</span> 美最高法院裁定IEEPA关税无效，白宫以行政令终止相关关税；但232条款等<strong>其他关税工具仍有效</strong>，关税不确定性未完全消除。<a href="https://chinese.pillsburylaw.com/us-supreme-court-invalidates-IEEPA-tariffs" target="_blank" rel="noopener">Pillsbury</a> · <a href="https://www.arnoldporter.com/zh-hans/perspectives/advisories/2026/02/scotus-tariff-decision-impacts-and-next-steps" target="_blank" rel="noopener">Arnold &amp; Porter</a></li>
+    </ul>
+  </div>
+</div>
+
+<h2>③ 央行动态 <span class="sub">货币政策是本期最大变量</span></h2>
+<div class="grid">
+  <div class="card cn">
+    <h3>中国人民银行</h3>
+    <ul class="list">
+      <li><span class="date">10-30</span> <strong>公开市场操作框架重构</strong>：11月2日起隔夜逆回购改为每个工作日招标操作（当前操作利率1.25%），7天期逆回购调整为多重价位中标，操作时点改至税期、月末等流动性关键节点。<a href="https://www.shobserver.com/wx/detail.do?id=1208266" target="_blank" rel="noopener">上观新闻</a></li>
+      <li><span class="date">11-06</span> 3个月买断式逆回购缩量续作，当周"削峰填谷"净回笼2000亿元；10月末曾连续9个工作日开展隔夜逆回购衔接税期与跨月。<a href="https://ifnews.com/news.html?aid=877727&cid=36" target="_blank" rel="noopener">财经资讯</a></li>
+      <li><span class="date">11-20</span> <strong>明日9:00</strong> 公布11月LPR报价：当前1年期 3.00%、5年期以上 3.50%（10月20日报价连续未变）。<a href="https://www.bankofchina.com/fimarkets/lilv/fd32/201310/t20131031_2591219.html" target="_blank" rel="noopener">中行LPR历史表</a></li>
+      <li><span class="date">解读</span> 10月贷款负增长印证信贷需求偏弱+票据冲量退潮，M1回升与地产销售改善相关；框架重构后资金利率波动率或下降，"量稳价降"格局延续（以上为公开报道综合，非预测）。</li>
+    </ul>
+  </div>
+  <div class="card us">
+    <h3>美联储</h3>
+    <ul class="list">
+      <li><span class="date">12-09</span> 下次FOMC决议12月8–9日举行；CME FedWatch显示加息25bp概率 <strong>95.6%</strong>（较一周前+18.2pct）。若兑现，联邦基金利率升至4.00–4.25%。<a href="https://m.sohu.com/a/1099721230_121157270" target="_blank" rel="noopener">CME数据转述</a></li>
+      <li><span class="date">背景</span> 10月CPI环比超预期+官方同比序列断档，令"数据可信度"本身成为政策变量；美联储面临通胀反弹与数据质量双重约束。<a href="https://www.sohu.com/a/1100089088_616824" target="_blank" rel="noopener">搜狐</a></li>
+    </ul>
+  </div>
+  <div class="card gl">
+    <h3>欧央行 · 日本央行</h3>
+    <ul class="list">
+      <li><span class="date">10-29</span> 欧央行维持三大利率不变：存款便利 <strong>2.50%</strong>、主要再融资 2.65%、边际贷款 2.90%，符合预期。<a href="https://bank.fx678.com/ecb" target="_blank" rel="noopener">汇通网</a></li>
+      <li><span class="date">10-30</span> 日本央行8:1维持政策利率约 <strong>1.25%</strong>；委员高田创提议加息至1.5%（反对票），并主张"尽早加息至中性利率"。<a href="https://bank.fx678.com/BOJ" target="_blank" rel="noopener">汇通网</a> · <a href="https://china.kyodonews.net/articles/-/18412" target="_blank" rel="noopener">共同社</a></li>
+      <li><span class="date">11月</span> 植田和男消费回暖表态后，12月会议加息预期升温（详见今日重点）；日央行同月决定加快出售ETF持仓。<a href="https://cn.investing.com/news/stock-market-news/article-3676066" target="_blank" rel="noopener">英为财情</a></li>
+    </ul>
+  </div>
+</div>
+
+<h2>④ 财政与产业政策</h2>
+<div class="grid">
+  <div class="card cn">
+    <h3>财政政策</h3>
+    <ul class="list">
+      <li><span class="date">10-09</span> 财政部下达 <strong>5500亿元</strong>地方政府债务结存限额：提高县区一般公共预算保障能力＋支持地方扩大有效投资。<a href="https://economy.caixin.com/2026-10-09/102491729.html" target="_blank" rel="noopener">财新</a></li>
+      <li><span class="date">10-27</span> 稳投资提速：9月以来专项债发行明显加快，叠加新型政策性金融工具、10月启用的地方债结余限额，机构测算<strong>四季度政府债券规模超5万亿元</strong>。<a href="https://www.news.cn/fortune/20261027/d4b2ddbdb2424ee8bfa0a4228e8d1f35/c.html" target="_blank" rel="noopener">新华社</a></li>
+      <li><span class="date">背景</span> 2026年继续安排超长期特别国债2500亿元支持消费品以旧换新（较2025年3000亿元收敛，"提质增效"导向）；1—8月以旧换新相关销售额1.55万亿元、惠及2.08亿人次。<a href="https://www.ndrc.gov.cn/fggz/202609/t20260930_1407948.html" target="_blank" rel="noopener">发改委</a> · <a href="https://topics.caixin.com/2026-03-05/102419659.html" target="_blank" rel="noopener">财新</a></li>
+    </ul>
+  </div>
+  <div class="card cn">
+    <h3>产业政策</h3>
+    <ul class="list">
+      <li><span class="date">01-21</span> 市场监管总局发布综合整治"内卷式"竞争十大典型案例：光伏行业"事前预警+合规辅导"，新能源汽车<strong>首次实施整车质量抽查</strong>，防范低价低质风险。<a href="http://www.scio.gov.cn/xwfb/bwxwfb/gbwfbh/gjscjgzj/202601/t20260127_947961.html" target="_blank" rel="noopener">国新办</a></li>
+      <li><span class="date">06-02</span> 国务院印发《城市更新"十五五"规划》：存量土地/房产过渡期政策（原则上不超5年）等制度安排，城市更新进入规划化推进阶段。<a href="https://www.mee.gov.cn/zcwj/gwywj/202606/t20260602_1157796.shtml" target="_blank" rel="noopener">中国政府网转载</a></li>
+      <li><span class="date">10-19</span> 发改委10月发布会：产业政策从"划园区、给要素"向"定场景、给机会、给环境、给规则"演进，推动场景培育与开放。<a href="https://www.ndrc.gov.cn/xwdt/wszb/syxwfbh" target="_blank" rel="noopener">发改委</a></li>
+    </ul>
+  </div>
+  <div class="card cn">
+    <h3>中美经贸与外管</h3>
+    <ul class="list">
+      <li><span class="date">09-28</span> 商务部确认：中美第八轮磋商（纽约/华盛顿）同意将2025年10月达成的<strong>《吉隆坡经贸磋商联合安排》延期至2027年1月10日</strong>（含美方24%对等关税暂停、中方相应措施暂停）。<a href="https://feng.ifeng.com/c/8wmWbsbNybR" target="_blank" rel="noopener">凤凰/商务部</a> · <a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_3e89743a8d5d4a95bccdda685830afbd.html" target="_blank" rel="noopener">商务部解读</a></li>
+      <li><span class="date">10-21</span> 美国出口管制"50%穿透规则"同步延期至2027-01-10；涉美供应链的合规窗口延长。<a href="https://www.tradesichuan.com/jmzx/6194.html" target="_blank" rel="noopener">四川贸促</a></li>
+      <li><span class="date">11-11</span> 王毅同美国国务卿鲁比奥通电话；近期何立峰与美国财长贝森特举行会谈（详见驻美使馆"最新消息"列表）。<a href="https://us.china-embassy.gov.cn/chn/zmgx_1/zxxx" target="_blank" rel="noopener">驻美使馆</a></li>
+    </ul>
+  </div>
+</div>
+
+<h2>⑤ 监管与市场治理</h2>
+<div class="card">
+  <ul class="list">
+    <li><span class="date">11-02</span> 证监会：稳市场稳预期答记者问（回购增持贷款4400亿额度上限，见"今日重点"）。</li>
+    <li><span class="date">11-14前后</span> 吴清主席在首届中国资本市场学术年会致辞：回顾科创板八周年，强调百年变局下的资本市场改革发展。<a href="https://www.csrc.gov.cn/csrc/c106311/c7670983/content.shtml" target="_blank" rel="noopener">证监会</a></li>
+    <li><span class="date">09-11</span> 证监会发布《期货公司监督管理办法》及配套实施公告。<a href="https://www.csrc.gov.cn/csrc/c100039/common_list.shtml" target="_blank" rel="noopener">证监会政策解读</a></li>
+    <li><span class="date">08-28</span> 证监会发布《关于资本市场支持构建房地产发展新模式的意见》。<a href="https://www.csrc.gov.cn/csrc/c100039/common_list.shtml" target="_blank" rel="noopener">证监会政策解读</a></li>
+    <li><span class="date">近期</span> 金融监管总局：加强财产保险公司费用分摊管理通知；与交通运输部、发改委、财政部、商务部、央行、国资委等七部门联合推动<strong>航运保险高质量发展</strong>。<a href="https://www.nfra.gov.cn" target="_blank" rel="noopener">金融监管总局</a></li>
+    <li><span class="date">近期</span> 金融监管总局、央行、证监会、财政部联合发布《关于健全金融机构治理的实施意见》。<a href="https://www.nfra.gov.cn/cn/view/pages/xinwenzixun/xinwenzixun.html" target="_blank" rel="noopener">金融监管总局新闻</a></li>
+  </ul>
+</div>
+
+<h2>⑥ 行业影响雷达 <span class="sub">政策 → 行业传导（信息梳理，非投资建议）</span></h2>
+<div class="card">
+  <table>
+    <tr><th style="width:150px">行业</th><th>关联政策/数据</th><th style="width:120px">方向特征</th></tr>
+    <tr><td>银行 · 非银金融</td><td>央行公开市场操作框架重构（每日隔夜逆回购）、买断式逆回购续作；回购增持贷款扩至约4400亿元额度上限；金融机构治理意见</td><td>资金面波动率或下降；信贷结构变化</td></tr>
+    <tr><td>光伏 · 新能源车 · 钢铁等</td><td>综合整治"内卷式"竞争：低价无序竞争治理、落后产能退出、整车质量抽查、光伏事前预警</td><td>供给端价格治理延续</td></tr>
+    <tr><td>家电 · 汽车 · 消费电子</td><td>以旧换新2026年额度2500亿（较上年收敛）；10月社零总额+0.4%但除汽车+2.5%，汽车类走弱</td><td>总额效应边际减弱、结构分化</td></tr>
+    <tr><td>建筑 · 建材 · 城市更新链</td><td>四季度政府债券或超5万亿、5500亿结存限额、《城市更新"十五五"规划》</td><td>基建与更新改造需求支撑</td></tr>
+    <tr><td>房地产</td><td>10月70城房价一线环比上涨、二三线下降但同比降幅收窄；证监会房地产新模式意见；贷款数据中M1回升</td><td>分化筑底、政策托底延续</td></tr>
+    <tr><td>出口链 · 航运 · 半导体</td><td>中美关税暂停延至2027-01-10、美"50%规则"延期；前10月机电出口+25.2%；七部门航运保险新政；美最高法院IEEPA裁决后232等工具仍在</td><td>外部环境窗口延长、合规不确定性部分缓释</td></tr>
+    <tr><td>石油石化 · 全球通胀链</td><td>中东冲突致海湾产量低于配额、OPEC+维持12月产量目标；美欧日央行整体偏紧（美12月加息预期、日12月加息预期）</td><td>能源供给风险溢价维持</td></tr>
+  </table>
+</div>
+
+<h2>⑦ 未来一周及近期重要日程</h2>
+<div class="card">
+  <table>
+    <tr><th style="width:190px">日期</th><th>事件</th></tr>
+    <tr><td><strong>11-20（周五）09:00</strong></td><td>中国11月LPR报价（1年期现3.00%、5年期以上3.50%）</td></tr>
+    <tr><td>11月下旬（预计）</td><td>美/欧/日11月PMI初值（通常每月第三或第四周发布，以官方日历为准）</td></tr>
+    <tr><td>11-26 / 11-27</td><td>美国感恩节，美股休市 / 半日交易</td></tr>
+    <tr><td>11-30（预计）</td><td>国家统计局11月制造业/非制造业PMI；12-01（预计）财新制造业PMI</td></tr>
+    <tr><td><strong>12-08/09</strong></td><td>美联储FOMC会议（9日决议声明；市场定价加息25bp概率约95.6%）</td></tr>
+    <tr><td>12月中（待官宣）</td><td>日本央行12月金融政策会议（86%受访经济学家预期加息至1.50%）</td></tr>
+    <tr><td>12月中旬（惯例）</td><td>中央经济工作会议（部署2027年经济工作；日期以官方通知为准）</td></tr>
+    <tr><td>2027-01-10</td><td>中美《吉隆坡联合安排》延期到期日；美出口管制"50%规则"延期到期日</td></tr>
+  </table>
+</div>
+
+<h2>⑧ 来源链接</h2>
+<div class="card">
+  <ul class="srclist">
+    <li>国家统计局数据发布：<a href="https://www.stats.gov.cn/sj/zxfb" target="_blank" rel="noopener">stats.gov.cn/sj/zxfb</a></li>
+    <li>海关总署（前10月进出口）：<a href="http://www.customs.gov.cn/customs/2026-11/11/article_2026111109124156465.html" target="_blank" rel="noopener">customs.gov.cn</a></li>
+    <li>财政部全国财政收支专栏：<a href="https://www.mof.gov.cn/zhengwuxinxi/redianzhuanti/quanguocaizhengshouzhiqingkuang" target="_blank" rel="noopener">mof.gov.cn</a></li>
+    <li>中国人民银行/中行LPR历史：<a href="https://www.bankofchina.com/fimarkets/lilv/fd32/201310/t20131031_2591219.html" target="_blank" rel="noopener">bankofchina.com</a></li>
+    <li>发改委（以旧换新/发布会）：<a href="https://www.ndrc.gov.cn/fggz/202609/t20260930_1407948.html" target="_blank" rel="noopener">ndrc.gov.cn</a></li>
+    <li>证监会（稳市场答记者问/吴清致辞/政策解读）：<a href="https://www.csrc.gov.cn/csrc/c100028/c7668092/content.shtml" target="_blank" rel="noopener">csrc.gov.cn</a></li>
+    <li>国家金融监督管理总局：<a href="https://www.nfra.gov.cn" target="_blank" rel="noopener">nfra.gov.cn</a></li>
+    <li>商务部（中美经贸磋商解读）：<a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_3e89743a8d5d4a95bccdda685830afbd.html" target="_blank" rel="noopener">mofcom.gov.cn</a></li>
+    <li>中国驻美使馆（中美往来动态）：<a href="https://us.china-embassy.gov.cn/chn/zmgx_1/zxxx" target="_blank" rel="noopener">us.china-embassy.gov.cn</a></li>
+    <li>东方财富（10月金融数据）：<a href="https://finance.eastmoney.com/a/202611163931633954.html" target="_blank" rel="noopener">finance.eastmoney.com</a></li>
+    <li>上观新闻（买断式逆回购/新框架）：<a href="https://www.shobserver.com/wx/detail.do?id=1208266" target="_blank" rel="noopener">shobserver.com</a></li>
+    <li>新华社（稳投资/国常会）：<a href="https://www.news.cn/fortune/20261027/d4b2ddbdb2424ee8bfa0a4228e8d1f35/c.html" target="_blank" rel="noopener">news.cn</a></li>
+    <li>财新（结存限额/以旧换新额度）：<a href="https://economy.caixin.com/2026-10-09/102491729.html" target="_blank" rel="noopener">caixin.com</a></li>
+    <li>财联社（OPEC+/固投快讯）：<a href="https://m.cls.cn/detail/2521751" target="_blank" rel="noopener">cls.cn</a></li>
+    <li>汇通网央行专区（美联储/日央行/欧央行）：<a href="https://bank.fx678.com" target="_blank" rel="noopener">bank.fx678.com</a></li>
+    <li>共同社（日央行委员高田创）：<a href="https://china.kyodonews.net/articles/-/18412" target="_blank" rel="noopener">china.kyodonews.net</a></li>
+    <li>英为财情（植田和男表态）：<a href="https://cn.investing.com/news/stock-market-news/article-3676066" target="_blank" rel="noopener">cn.investing.com</a></li>
+    <li>CoinDesk（美国10月CPI）：<a href="https://www.coindesk.com/zh/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3" target="_blank" rel="noopener">coindesk.com</a></li>
+    <li>CME FedWatch转述（12月加息概率）：<a href="https://m.sohu.com/a/1099721230_121157270" target="_blank" rel="noopener">sohu.com</a></li>
+    <li>TradingEconomics（美利率/非农）：<a href="https://zh.tradingeconomics.com/united-states/interest-rate" target="_blank" rel="noopener">tradingeconomics.com</a></li>
+    <li>Pillsbury / Arnold &amp; Porter（美最高法院IEEPA裁决解读）：<a href="https://chinese.pillsburylaw.com/us-supreme-court-invalidates-IEEPA-tariffs" target="_blank" rel="noopener">pillsburylaw.com</a></li>
+    <li>国新办（内卷式竞争整治发布会）：<a href="http://www.scio.gov.cn/xwfb/bwxwfb/gbwfbh/gjscjgzj/202601/t20260127_947961.html" target="_blank" rel="noopener">scio.gov.cn</a></li>
+    <li>四川贸促（美50%规则延期）：<a href="https://www.tradesichuan.com/jmzx/6194.html" target="_blank" rel="noopener">tradesichuan.com</a></li>
+  </ul>
+</div>
+
+<div class="note" style="margin-top:22px">
+  ℹ️ <strong>数据可用性说明</strong>：gov.cn、ndrc 首页等为动态渲染页面，自动抓取受限，相关内容经由搜索结果与可访问页面获取；
+  美国10月CPI同比因官方数据序列断档而缺失（第三方估算值仅供参考）；财政部1—10月收支截至发稿尚未检索到发布。
+  本页所有"预计/待官宣"条目以官方日历为准。
+</div>
+
+<footer>
+  <p><strong>免责声明：</strong>本页面由自动化程序基于公开信息聚合生成，仅供研究与信息参考，不构成任何投资建议或决策依据。
+  数据与政策以各官方机构正式发布为准。引用内容版权归原机构所有。</p>
+  <p style="margin-top:6px">宏观经济与政策雷达 ｜ 更新时间：2026-11-19 17:45 CST ｜ 仓库：macro-policy-radar ｜ 每日 09:00（Asia/Shanghai）自动更新</p>
+</footer>
+
+</div>
+</body>
+</html>
